@@ -1,5 +1,6 @@
 ﻿using ASPNETCore_DB.Interfaces;
 using ASPNETCore_DB.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,8 @@ namespace ASPNETCore_DB.Controllers
             }
             
         }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             pageNumber = pageNumber ?? 1;
@@ -63,29 +66,47 @@ namespace ASPNETCore_DB.Controllers
         }
         public IActionResult Details(string id)
         {
-            ViewResult viewDetail = View();
             try
             {
-                viewDetail = View(_studentRepo.Details(id));
+                if (string.IsNullOrEmpty(id))
+                {
+                    var student = _studentRepo.ByEmail(this.User.Identity.Name.ToString());
+                    return View(student);
+                }
+                else
+                {
+                    var student = _studentRepo.Details(id);
+                    return View(student);
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception("Student detail not found");
             }
-
-
-            return viewDetail;
         }
 
+        [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Create()
         {
-            Student student = new Student();
-            string fileName = "Default.png";
-            student.Photo = fileName;
-            return View(student);
+            // For Existing Students
+            var studentExits = _studentRepo.ByEmail(this.User.Identity.Name.ToString());
+
+            if (studentExits != null)
+            {
+                return RedirectToAction("Details", "Student", studentExits.StudentNumber);
+            }
+            else
+            {
+                Student student = new Student();
+                string fileName = "Default.png";
+                student.Photo = fileName;
+                return View(student);
+            }
+            
         }
 
+        [Authorize(Roles = "User")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("StudentNumber, FirstName, Surname, EnrollmentDate, Photo, Email")] Student student)
@@ -114,9 +135,22 @@ namespace ASPNETCore_DB.Controllers
             {
                 throw new Exception("Student could not be created");
             }
-            return RedirectToAction(nameof(Index));
+
+            // For existing students
+            var studentExits = _studentRepo.ByEmail(this.User.Identity.Name.ToString());
+
+            if (studentExits != null)
+            {
+                return RedirectToAction("Details", "Student", new { id = studentExits.StudentNumber });
+            }
+            else
+            {
+                return RedirectToAction("Create");
+            }
+
         }
 
+        [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Edit(string id)
         {
@@ -132,6 +166,7 @@ namespace ASPNETCore_DB.Controllers
             return viewDetail;
         }
 
+        [Authorize(Roles = "User")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit([Bind("StudentNumber, FirstName, Surname, EnrollmentDate, Photo, Email")] Student student)
@@ -178,6 +213,7 @@ namespace ASPNETCore_DB.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Delete(string id)
         {
@@ -193,6 +229,7 @@ namespace ASPNETCore_DB.Controllers
             return viewDetail;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Delete([Bind("StudentNumber, FirstName, Surname, EnrollmentDate, Photo, Email")] Student student)

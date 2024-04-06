@@ -34,6 +34,12 @@ namespace ASPNETCore_DB.Repositories
             return student;
         }
 
+        public Student ByEmail(string id)
+        {
+            var student = _context.Students?.FirstOrDefault(x => x.Email == id);
+            return student;
+        }
+
         public Student Edit(Student student)
         {
             _context.Update(student);
