@@ -1,5 +1,13 @@
+:root {
+  --main-background-color: #004378;
+  --main-accent-green: #2A942D;
+  --main-accent-red: #A31110;
+  --main-accent-yellow: #FDCC19;
+  --main-accent-blue: #0980CB;
+}
+
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +23,36 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.main-bg-color {
+  background-color: #004378;
+}
+
+.border-top-red {
+  border-top: 8px solid #A31110;
+}
+
+.border-top-blue {
+  border-top: 8px solid var(--main-accent-blue);
+}
+
+.border-top-green {
+  border-top: 8px solid var(--main-accent-green);
+}
+
+.border-top-yellow {
+  border-top: 8px solid var(--main-accent-yellow);
+}
+
+
+.social-icons li {
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.1s
+}
+
+.social-icons li:hover {
+    transform: scale(1.4);
+    
 }

@@ -31,6 +31,27 @@ namespace ASPNETCore_DB.Controllers
             {
                 ViewData["UserRole"] = "Admin";
             }
+            else if (this.User.IsInRole("User"))
+            {
+                ViewData["UserRole"] = "User";
+            }
+            else
+            {
+                ViewData["UserRole"] = "Guest";
+            }
+
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewData["UserID"] = _userManager.GetUserId(this.User);
+            ViewData["UserName"] = _userManager.GetUserName(this.User);
+
+            if (this.User.IsInRole("Admin"))
+            {
+                ViewData["UserRole"] = "Admin";
+            }
             else
             {
                 ViewData["UserRole"] = "User";
