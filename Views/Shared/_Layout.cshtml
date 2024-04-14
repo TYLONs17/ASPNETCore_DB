@@ -4,12 +4,15 @@
 @inject UserManager<IdentityUser> UserManager
 
 
+@*@model ContactFormViewModel*@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ASPNETCore_DB</title>
+    <title>@ViewData["Title"] - CUT | Student Life</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ASPNETCore_DB.styles.css" asp-append-version="true" />
@@ -85,24 +88,82 @@
     </div>
 
     <div class="container align-items-bottom">
-        <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 px-4 my-4 border-top-red main-bg-color">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img src="/assets/CUT_Logo.png" alt="CUT logo" />
-                </a>
+        <footer class="footer py-3 px-4 my-4 border-top-red main-bg-color">
+
+            <div class="row d-flex flex-wrap justify-content-between align-items-center mb-2">
+                <div class="col-md-4">
+                    <h2 class="text-white">Group members</h2>
+                    <ul class="">
+                        <li><a href="https://github.com/JALES25" class="text-white">J.N Modiba - 221004954</a></li>
+                        <li><a href="#" class="text-white">M.A Ramohapi - 222010109</a></li>
+                        <li><a href="#" class="text-white">@@~Nelly - (missing details1)</a></li>
+                        <li><a href="#" class="text-white">@@~Marsh Mallow - (missing details2)</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="text-white fs-6">Thingking Beyond</h2>
+                </div>
+                
+
+                <div class="col-md-4 text-white d-flex flex-column justify-content-center align-items-end">
+                    <div>
+                        <h2 class="text-white">Contact Us</h2>
+                        <form class="contact-form" asp-action="Contact" asp-controller="Home" onsubmit="return updateRecipient()">
+
+                            <label class="contact-label" for="choice-bfn">
+                                <input class="input-radio" id="choice-bfn" type="radio" name="choice" value="BFN Campus" checked="checked" onchange="updateRecipient()">
+                                BFN Campus
+                            </label>
+                            <label class="contact-label" for="choice-wlk">
+                                <input class="input-radio" id="choice-wlk" type="radio" name="choice" value="WLK Campus" onchange="updateRecipient()">
+                                WLK Campus
+                            </label>
+                            <input type="hidden" id="campusEmail" name="campusEmail" value="CUTAdminBFN2024@gmail.com">
+
+                            @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+
+                            <div class="input-wrap" data-validate="Name is required">
+                                <input class="input" type="text" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="input-wrap" data-validate="Valid email is required: example@email.com">
+                                <input class="input" type="text" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="input-wrap" data-validate="Message is required">
+                                <textarea class="input" name="message" placeholder="Your Message"></textarea>
+                            </div>
+                            <button class="btn btn-danger" type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-md-2 d-flex justify-content-around">
-                <span class="text-muted">&copy; 2024 CODE&trade;</span>
+
+
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <img src="/assets/CUT_Logo.png" alt="CUT logo" />
+                    </a>
+                </div>
+
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <div class="text-muted">&copy; 2024 CODE&trade;</div>
+                    <div class="text-white fs-6">For: SSD316_b Grp Assignmnt 1</div>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-icons">
+                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
             </div>
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-icons">
-                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-youtube"></i></a></li>
-                <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
         </footer>
     </div>
 

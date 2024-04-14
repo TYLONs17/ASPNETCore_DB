@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+//using System.Net.Mail;
+
 namespace ASPNETCore_DB.Controllers
 {
     public class HomeController : Controller
@@ -56,6 +58,7 @@ namespace ASPNETCore_DB.Controllers
             {
                 ViewData["UserRole"] = "User";
             }
+
             return View();
         }
 
@@ -76,5 +79,50 @@ namespace ASPNETCore_DB.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        //[HttpPost]
+        //public IActionResult Contact(ContactFormViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        string selectedCampusEmail = model.CampusEmail;
+
+        //        SendEmail(model.Name, model.Email, model.Message, selectedCampusEmail);
+
+        //        return View("Success");
+        //    }
+
+        //    return View(); 
+        //}
+
+        //private void SendEmail(string name, string email, string message, string campusEmail)
+        //{
+        //    string recipientEmail = "";
+        //    if (campusEmail == "BFN Campus")
+        //    {
+        //        recipientEmail = "CUTAdminBFN2024@gmail.com";
+        //    }
+        //    else if (campusEmail == "WLK Campus")
+        //    {
+        //        recipientEmail = "CUTAdminWLK2024@gmail.com";
+        //    }
+        //    else
+        //    {
+        //        throw new Exception("Invalid campus email selection");
+        //    }
+
+        //    var mailMessage = new MailMessage();
+        //    mailMessage.From = new MailAddress(email);
+        //    mailMessage.To.Add(new MailAddress(recipientEmail));
+        //    mailMessage.Subject = "CUT | Studen Life Webpage Contact Form Submission";
+        //    mailMessage.Body = $"Name: {name}\nEmail: {email}\nMessage: {message}";
+        //    mailMessage.IsBodyHtml = false;
+
+        //    var smtpClient = new SmtpClient("smtp.gmail.com", 587); // Replace with your SMTP server details
+        //    smtpClient.Credentials = new NetworkCredential("youremail@example.com", "yourpassword"); // Replace with your credentials
+        //    smtpClient.EnableSsl = true;
+        //    smtpClient.Send(mailMessage);
+        //}
+
     }
 }

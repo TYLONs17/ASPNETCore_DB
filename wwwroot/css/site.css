@@ -56,3 +56,95 @@ body {
     transform: scale(1.4);
     
 }
+
+
+
+/*For Login and Register*/
+    #account, #registerForm {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .form-floating {
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        color: #495057;
+    }
+
+    .form-control {
+        height: calc(2.75rem + 2px);
+    }
+
+    .checkbox {
+        margin-bottom: 15px;
+    }
+
+    #login-submit, #registerSubmit {
+        margin-top: 15px;
+    }
+
+
+    a {
+        color: #007bff;
+    }
+
+    a:hover {
+        color: #0056b3;
+    }
+
+
+    #external-account {
+        margin-top: 20px;
+    }
+
+    #external-account button {
+        margin-right: 10px;
+    }
+
+    .form-check-label {
+        margin-left: 1rem;
+    }
+/*End For Login and Register*/
+
+
+/*For Footer*/
+    .contact-label {
+        margin-bottom: 10px;
+    }
+
+    .input-radio {
+        margin-right: 10px;
+    }
+
+    .input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .text-danger {
+        color: #dc3545;
+    }
+
+    .footer {
+        color: #fff;
+    }
+/*End For Footer*/

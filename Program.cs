@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<SQLiteDBContext>(options =>
@@ -21,6 +22,8 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IExceptionFilter, CustomExceptionFilter>();
 builder.Services.AddScoped<IDBInitializer, DBInitializerRepo>();
 builder.Services.AddScoped<IStudent, StudentRepo>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -25,22 +25,25 @@ namespace ASPNETCore_DB.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
+            UserManager<IdentityUser> userManager,
+            RoleManager<IdentityRole> roleManager,  
+            IUserStore<IdentityUser> userStore,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            _signInManager = signInManager;
             _userManager = userManager;
+            _roleManager = roleManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
-            _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
         }
@@ -121,6 +124,15 @@ namespace ASPNETCore_DB.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    // Check if the user is registering as admin
+                    bool isAdmin = Request.Form["role"] == "admin";
+
+                    // Assign role based on user selection
+                    string role = isAdmin ? "Admin" : "User";
+
+                    // Add the role to the user
+                    await _userManager.AddToRoleAsync(user, role);
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
