@@ -96,8 +96,8 @@
                     <ul class="">
                         <li><a href="https://github.com/JALES25" class="text-white">J.N Modiba - 221004954</a></li>
                         <li><a href="#" class="text-white">M.A Ramohapi - 222010109</a></li>
-                        <li><a href="#" class="text-white">@@~Nelly - (missing details1)</a></li>
-                        <li><a href="#" class="text-white">@@~Marsh Mallow - (missing details2)</a></li>
+                        <li><a href="#" class="text-white">N Gwinya 219010727</a></li>
+                        <li><a href="#" class="text-white">O.S Maine 222037266</a></li>
                     </ul>
                 </div>
 
@@ -172,6 +172,29 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    <script>
+        //Custom JS for controlling carousel pause / resume
+        document.addEventListener("DOMContentLoaded", function () {
+            var myCarousel = document.getElementById('carouselExampleControls');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 3000
+            });
+
+            var pauseButton = document.querySelector('.pause-carousel');
+            pauseButton.addEventListener('click', function () {
+                if (pauseButton.getAttribute('aria-pressed') == 'false') {
+                    carousel.pause();
+
+                }
+                else {
+                    carousel.cycle();
+                }
+            } )
+
+        } )
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
