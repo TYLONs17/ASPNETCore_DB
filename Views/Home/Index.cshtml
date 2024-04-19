@@ -3,9 +3,49 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container-fluid border-bottom mb-3">
-    <h1 class="text-center">CUT Student Life Webpage</h1>
+<div class="container-fluid border-bottom mb-3 d-flex justify-content-around align-items-center">
+    <h1 class="col-4 text-center">CUT Student Life</h1>
+    <div class="col-6    col-xs-8 announcement">
+        <div class="media d-flex">
+            <div class="col-sm-4 mediac-head dynamic-color-border d-flex flex-column justify-content-center align-items-center" style="border-right: 9px solid rgb(163, 17, 16);">
+                <h4>Announcements</h4>
+                <div>
+                    <a href="/announcements">
+                    View All <i class="fa fa-light fa-arrow-right-long dynamic-color" style="color: rgb(163, 17, 16);"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-8 mediac-body d-flex AnnouncementsCarousel" style="padding-left: 50px; padding-right:50px; justify-content:unset;">
+                <div id="Announcement-carousel" class="carousel slide" data-ride="carousel" style="width:100%;">
 
+                    <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-sm-11">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner " role="listbox">
+                                            <div class="item active">
+                                                <div class="media-content pull-left">
+                                                    <h4><a href="/announcements/235">Sports: Womans Netball and cheerleading team have a pretty asfk rating of 1.7%</a></h4>
+                                                    like Gad Damn nig could you imagi...
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-1" style="padding: 0;">
+                                <!-- Controls -->
+                                <div>
+                                    <a class="right" href="#Announcement-carousel" role="button" data-slide="next">
+                                        <i class="fa fa-thin fa-chevron-right fa-4x dynamic-color nav-toggle" aria-hidden="true" style="color: rgb(163, 17, 16);"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid">
@@ -77,6 +117,46 @@
         <div class="col-md-1 flex-grow-1 advertisement-column">
             <!-- Insert advertisement content for right column -->
             <img src="/assets/advertisement3.jpg" alt="Advertisement 3" class="img-fluid advertisement-image" height="1000">
+        </div>
+    </div>
+
+
+    <!-- Upcoming Events row -->
+    <div class="services-wrapper my-3">
+        <h2><b>Upcoming Events</b></h2>
+        <div class="d-flex">
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(253, 204, 28);">
+                <div class="faculty-logo">
+                    <a href="/faculty/humanities">
+                        <img src="/assets/Mens-football.jpg" width="300" height="160" alt="mens football" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(42, 148, 45);">
+                <div class="faculty-logo">
+                    <a href="/faculty/health-and-environmental-sciences">
+                        <img src="/assets/netball-celebration.jpg" width="300" height="160" alt="Health and Environmental Sciences" title="Health and Environmental Sciences" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(9, 128, 203);">
+                <div class="faculty-logo">
+                    <a href="/faculty/faculty-of-engineering-information-technology">
+                        <img src="/assets/cycling-event.jpg" width="300" height="160" alt="Engineering, Built Environment and Information Technology" title="Engineering, Built Environment and Information Technology" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(163, 17, 16);">
+                <div class="faculty-logo">
+                    <a href="/faculty/management-sciences">
+                        <img src="https://cms.cut.ac.za/Files/Images/7b2aed41-af84-4797-8892-b5f9f8a94702.png" alt="Management Sciences" title="Management Sciences" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 

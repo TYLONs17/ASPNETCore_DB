@@ -7,62 +7,39 @@
     ViewData["Title"] = "About";
 }
 
-<div class="container-fluid border-bottom mb-3">
-    <h1>About CUTStudent life</h1>
-    <br />
+<div class="container-fluid border-bottom mb-3 text-center">
+    <h1 class="">Welcome to CUT Student Life</h1>
+
+    <h2 class="mb-4">Discover the Vibrant Student Life at CUT</h2>
+
 </div>
-<div class="container-fluid">
 
-    @if (SignInManager.IsSignedIn(User))
-    {
-    <div class="text-center">
-        <h1>User Logged In Information:</h1>
-        <p>User Id: @ViewData["UserID"]</p>
-        <p>User Name: @ViewData["UserName"]</p>
-        <p>User Role: @ViewData["UserRole"]</p>
-    </div>
-    }
-
-    <br />
-
-    <div class="row">
-        <div class="col-md-8">
-            <h2>Welcome to the Student Management System</h2>
-            <br />
-
-            <p class="justify-content-">
-                •	ASP.NET Core MVC web solution that utilizes an SQLite database to port information to and from the web interface by means of the View, Controller and Model framework and Entity Framework Core.
-            </p>
-            <p class="justify-content-evenly">
-                •	The exercise will allow you to dynamically create a database and datatable by means of the ASP.NET core MVC functionality and Entity Framework code first design.
-            </p>
-            <p class="justify-content-evenly">
-                •	It will demonstrate the creation of a model, the view and the code required for the controller to pass information from the database to the interface and then from the interface back to the database.
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-
-            <h2>Build it from scratch</h2>
-
-            <p class="justify-content-evenly">You can build the application by following the steps in a series of exercises made available on eThuto -> SOD226C.</p>
-
-            <p><a class="btn btn btn-primary" href="https://ethuto.cut.ac.za/">Log in &raquo;</a></p>
-
-        </div>
-    </div>
-
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div class="container my-2">
+    <div id="carouselExampleControls" class="carousel slide mb-5" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="/assets/slider-3.jpg" alt="First slide">
+                <img class="d-block w-100" height="500" src="/assets/slider-3.jpg" alt="First slide">
+                <div class="carousel-caption-overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide Title</h5>
+                    <p class="mb-4">At Central University of Technology, we strive to create an enriching and dynamic environment for our students. Our Student Management System plays a crucial role in facilitating student life by providing essential tools and resources.</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="/assets/slider-2.jpg" alt="Second slide">
+                <img class="d-block w-100" height="500" src="/assets/slider-1.jpg" alt="Second slide">
+                <div class="carousel-caption-overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide Title</h5>
+                    <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="/assets/slider-1.jpg" alt="Third slide">
+                <img class="d-block w-100" height="500" src="/assets/slider-2.jpg" alt="Third slide">
+                <div class="carousel-caption-overlay"></div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Slide Title</h5>
+                    <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -76,3 +53,21 @@
     </div>
 </div>
 
+<div class="container">
+
+    <p class="">
+        With campuses in Bloemfontein and Welkom, the Central University of Technology (CUT) is a well-known higher education establishment in South Africa. 
+        
+        <br /> <br/>
+        It was founded in 1981 and provides a range of degrees in subjects like management sciences, humanities, and STEM. CUT, which has more than 21,000 students, strives to be a preeminent technological university in Africa with a focus on innovation and social impact. 
+        Research and innovation are given priority, especially when it comes to additive manufacturing for use in the medical field. 
+        
+        <br />
+        CUT seeks to address issues of national and regional development while promoting global engagement through collaborations and internationalization initiatives. 
+        By 2030, CUT, which is dedicated to academic excellence and principles like ethics and Ubuntu, hopes to use innovation to shape the future.
+    </p>
+    
+</div>
+
+
+<div class="row"

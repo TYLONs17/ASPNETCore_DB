@@ -25,61 +25,65 @@
 <body>
     <header>
         <div class="container">
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> <img width="80" height="50" src="/assets/CUT_Logo.png" alt="CUT logo" /> </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="/assets/CUT_Logo.png" alt="CUT logo" style="max-width: 100px; height: auto;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 18px; font-weight: bold;">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About" style="font-size: 18px; font-weight: bold;">About</a>
                             </li>
-                            @if (SignInManager.IsSignedIn(User) && User.IsInRole("User"))
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 18px; font-weight: bold;">Privacy</a>
+                            </li>
+                            @if (SignInManager.IsSignedIn(User))
                             {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Create">Enroll</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Details">Your Details</a>
-                            </li>
-                            }
-                            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-                            {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Students</a>
-                            </li>
-                            }
-
-                            @* @if (SignInManager.IsSignedIn(User))
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Student" asp-action="Details" style="font-size: 18px; font-weight: bold;">Your Details</a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
                                 {
-                                    <div class="text-right">
-                                        <p>You are logged in as: @ViewData["UserRole"] </p>
-                                    </div>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Student" asp-action="Index" style="font-size: 18px; font-weight: bold;">Students</a>
+                                    </li>
                                 }
-                                else
+                                @if (User.IsInRole("User"))
                                 {
-                                    <div class="text-right">
-                                        <p>You are not logged in</p>
-                                    </div>
-                                } *@
-
-                            <div class="">
-                                <partial name="_LoginPartial" />
-                            </div>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-area="" asp-controller="Student" asp-action="Create" style="font-size: 18px; font-weight: bold;">Enroll</a>
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button id="logout" type="submit" class="btn btn-link nav-link" style="font-size: 18px; font-weight: bold;">Logout</button>
+                                    </form>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item right-align">
+                                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Register" style="font-size: 18px; font-weight: bold;">Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Login" style="font-size: 18px; font-weight: bold;">Login</a>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+
+
 
     <div class="container">
         <main role="main" class="pb-3">
