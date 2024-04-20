@@ -27,9 +27,14 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img src="/assets/CUT_Logo.png" alt="CUT logo" style="max-width: 100px; height: auto;">
-                    </a>
+                    <div>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="/assets/CUT_Logo.png" alt="CUT logo" style="max-width: 100px; height: auto;">
+                        </a>
+
+                        <p class="text-center">CUT Student Life</p>
+                    </div>
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -106,6 +111,11 @@
                 </div>
 
                 <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <img src="/assets/CUT_Logo.png" alt="CUT logo" />
+                    </a>
+
+                    <br /> <br />
                     <h2 class="text-white fs-6">Thingking Beyond</h2>
                 </div>
                 
@@ -148,10 +158,10 @@
 
 
             <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <div class="col-md-4 d-flex align-items-center ">
+                    @* <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                         <img src="/assets/CUT_Logo.png" alt="CUT logo" />
-                    </a>
+                    </a> *@
                 </div>
 
                 <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
