@@ -3,47 +3,69 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container-fluid border-bottom mb-3 d-flex justify-content-around align-items-center">
+<div class="container-fluid border-bottom-red mb-3 d-flex justify-content-around align-items-center">
     @*<h1 class="col-4 text-center">CUT Student Life</h1>*@
-    <div class="col-xs-8 announcement">
-        <div class="media d-flex justify-content-around align-items-center ">
-            <div class="col-sm-4 mediac-head dynamic-color-border d-flex flex-column justify-content-center align-items-center" style="border-right: 9px solid rgb(163, 17, 16);">
-                <h4>Announcements</h4>
+    <div class="col-xs-8 announcement mb-3">
+        <div class="media d-flex ">
+            <div class="col-sm-4 mediac-head dynamic-color-border d-flex flex-column justify-content-center align-items-center" style="border-right: 9px solid rgb(163, 17, 16); width: 20rem;">
+                <h3>Announcements</h3>
                 <div>
-                    <a href="/announcements">
-                    View All <i class="fa fa-light fa-arrow-right-long dynamic-color" style="color: rgb(163, 17, 16);"></i>
+                    <a href="">
+                        <span class="">View All</span>
+                        <i class="fa fa-light fa-arrow-right-long dynamic-color" style="color: rgb(163, 17, 16);"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-sm-8 mediac-body d-flex AnnouncementsCarousel" style="padding-left: 50px; padding-right:50px; justify-content:unset;">
-                <div id="Announcement-carousel" class="carousel slide" data-ride="carousel" style="width:100%;">
+
+            <div class="col-sm-8 media-body d-flex AnnouncementsCarousel" style="padding-left: 50px; padding-right: 50px; width: 56rem;">
+                <div id="Announcement-carousel" class="carousel slide" data-ride="carousel" style="width: 100%;">
 
                     <div class="row d-flex justify-content-center align-items-center">
-                            <div class="col-sm-11">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner " role="listbox">
-                                            <div class="item active">
-                                                <div class="media-content pull-left">
-                                                    <h4><a href="/">Sports: Womans Netball and cheerleading team have a pretty asfk rating of 1.7%</a></h4>
-                                                    like Gad Damn nig could you imagin...
-                                                </div>
-                                            </div>
+                        <div class="col-sm-11">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class=" ">
+                                        <h5> <a href="/">Sports: Women's Netball and cheerleading team have a pretty rating of 1.7%</a> </h5>
+                                        like Gad Damn nig could you imagine the effort put into...
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <div class=" ">
+                                        <h5> <a href="/">Sports: "Rugby Cup could be ours.."</a> </h5>
+                                        It seems like this season is a good one...
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <div class=" ">
+                                        <h5> <a href="/">Eports: CUT launches in-house CS:GO Event for their students</a> </h5>
+                                        IT students will have themselves a go at testing LAN Servers gaining...
+                                    </div>
+                                </div>
+                                <div class="carousel-item ">
+                                    <div class=" ">
+                                        <h5> <a href="/">CUT-Life: Graduates are on a high! Finally they get to see the light.</a> </h5>
+                                        Some say their efforts are about to be rewarded other are reluctant to even...
+                                    </div>
+                                </div>
 
-                                </div>
-                            </div>
-                            <div class="col-sm-1" style="padding: 0;">
-                                <!-- Controls -->
-                                <div>
-                                    <a class="right" href="#Announcement-carousel" role="button" data-slide="next">
-                                        <i class="fa fa-thin fa-chevron-right fa-4x dynamic-color nav-toggle" aria-hidden="true" style="color: rgb(163, 17, 16);"></i>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
-                </div>
+                        <div class="col-sm-1" style="padding: 0;">
+                            <!-- Controls -->
+                            <div>
+                                <button class="carousel-control-next right" data-bs-target="#Announcement-carousel" role="button" data-bs-slide="next">
+                                    <i class="fa fa-chevron-right fa-4x dynamic-color nav-toggle" aria-hidden="true" style="color: rgb(163, 17, 16);"></i>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -54,121 +76,142 @@
     <div class="row d-flex">
         <!-- Left Advertisement Column -->
         <!--<div class="col-md-1 flex-grow-1 advertisement-column" >-->
-            <!-- Insert advertisement content for left column -->
-            <!--<img src="/assets/advertisement1.jpg" alt="Advertisement 1" class="img-fluid advertisement-image">
+        <!-- Insert advertisement content for left column -->
+        <!--<img src="/assets/advertisement1.jpg" alt="Advertisement 1" class="img-fluid advertisement-image">
         </div>-->
-
-
-
         <!-- Middle Slider Column -->
         <div class="">
             @* Slider test *@
             @*<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="/assets/slider-1.jpg" alt="First slide">
-                    <div class="carousel-caption-overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Slide Title</h5>
-                        <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="/assets/slider-1.jpg" alt="First slide">
+                            <div class="carousel-caption-overlay"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide Title</h5>
+                                <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/assets/slider-2.jpg" alt="Second slide">
+                            <div class="carousel-caption-overlay"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide Title</h5>
+                                <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/assets/slider-3.jpg" alt="Third slide">
+                            <div class="carousel-caption-overlay"></div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Slide Title</h5>
+                                <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/slider-2.jpg" alt="Second slide">
-                    <div class="carousel-caption-overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Slide Title</h5>
-                        <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="/assets/slider-3.jpg" alt="Third slide">
-                    <div class="carousel-caption-overlay"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Slide Title</h5>
-                        <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>*@
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>*@
 
 
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide position-relative" data-bs-ride="carousel" data-bs-interval="4000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" height="500" src="/assets/adver.jpg" alt="First slide">
+                        <img class="d-block w-100" height="500" src="/assets/adver.jpg" alt="Celebrating Student Life at CUT">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" height="500" src="/assets/netball-celebration.jpg" alt="Third slide">
+                        <img class="d-block w-100" height="500" src="/assets/netball-celebration.jpg" alt="Ladies Rugby team">
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
-                            <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            <p>The Ladies Rugby team showcased their top form to claim their &apos;Victory royale&apos;.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" height="500" src="/assets/mens-football.jpg" alt="Third slide">
+                        <img class="d-block w-100" height="500" src="/assets/mens-football.jpg" alt="Mens Football Team">
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
-                            <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            <p>Congratulations to the Mens Football team for making it to the Varssity Cup 2024.</p>
                         </div>
                     </div>
                     <div class="carousel-item ">
-                        <img class="d-block w-100" height="500" src="/assets/adver3.jpg" alt="First slide">
+                        <img class="d-block w-100" height="500" src="/assets/adver3.jpg" alt="CUT Cheerleading squat">
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
-                            <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            <p>Spotlight on the  CUT Cheerleading Quad for their gracefull perfomances!</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" height="500" src="/assets/labs-hack.jpg" alt="Second slide">
+                        <img class="d-block w-100" height="500" src="/assets/esports.jpg" alt="CUT esports event">
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
-                            <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            <p>IT Studens participating in the LAN(in-house) CUT CS:GO Gaming event as part of their Computer Networking program. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" height="500" src="/assets/cycling-event.jpg" alt="CUT Cycling Event">
+                        <div class="carousel-caption-overlay"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>The season has come again for the CUT Cycling event, will you be joining?</p>
                         </div>
                     </div>
                     <div class="carousel-item ">
                         <img class="d-block w-100" height="500" src="/assets/adver2.jpg" alt="First slide" />
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
-                            <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
+                            <p>Graduation Event is underway!</p>
                         </div>
                     </div>
                     <div class="carousel-item ">
-                        <img class="d-block w-100" height="500" src="/assets/cycling-event.jpg" alt="First slide">
+                        <img class="d-block w-100" height="500" src="/assets/adver-ai.jpg" alt="First slide" />
+                        <div class="carousel-caption-overlay"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>RSVP Now for the CUT AI Event!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" height="500" src="/assets/background-img-cut-library.jpg" alt="First slide" />
                         <div class="carousel-caption-overlay"></div>
                         <div class="carousel-caption d-none d-md-block">
                             <p>Slide Description - lorem blah bla this is to do something in place of the describing lorem nonsense</p>
                         </div>
                     </div>
-                    
-                    
-                    
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <!-- Pause Control -->
+                    @*<button id="pausePlayButton" class="btn btn-secondary pause-button position-absolute top-50 start-50 translate-middle" type="button" data-bs-toggle="carousel" data-bs-target="#carouselExampleControls" data-bs-pause="hover" data-bs-interval="false">
+                            <i class="fas fa-pause"></i>
+                        </button>*@
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
                 </div>
             </div>
-
-
-
         </div>
 
-        
+
 
         <!-- Right Advertisement Column -->
         <!--<div class="col-md-1 flex-grow-1 advertisement-column">-->
-            <!-- Insert advertisement content for right column -->
-            <!--<img src="/assets/advertisement3.jpg" alt="Advertisement 3" class="img-fluid advertisement-image" height="1000">
+        <!-- Insert advertisement content for right column -->
+        <!--<img src="/assets/advertisement3.jpg" alt="Advertisement 3" class="img-fluid advertisement-image" height="1000">
         </div>-->
     </div>
 
@@ -179,37 +222,88 @@
         <div class="d-flex">
             <div class="col-sm-3 margin-top-5">
                 <hr class="article-color" style="border-bottom: 9px solid rgb(253, 204, 28);">
-                <div class="faculty-logo">
-                    <a href="/faculty/humanities">
-                        <img src="/assets/Mens-football.jpg" width="300" height="160" alt="mens football" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                <div class="main-events">
+                    <a href="/">
+                        <img src="/assets/adver-rugby.jpg" width="300" height="160" alt="mens rugby event" class="img-responsive">
                     </a>
+                    <p class="text-center fw-bold">CUT Rugby team on a roll</p>
                 </div>
-                <p class="text-center">The Mans football team in top form</p>
+                
             </div>
             <div class="col-sm-3 margin-top-5">
                 <hr class="article-color" style="border-bottom: 9px solid rgb(42, 148, 45);">
-                <div class="faculty-logo">
-                    <a href="/faculty/health-and-environmental-sciences">
+                <div class="main-events">
+                    <a href="https://www.cut.ac.za/news/congratulations-cut-men-and-women-football-varsity-football-2024">
                         @* alt text re, *@
-                        <img src="/assets/netball-celebration.jpg" width="300" height="160" alt="Health and Environmental Sciences" title="Health and Environmental Sciences" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                        <img src="/assets/womans-football.jpg" width="300" height="160" alt="womans football team" class="img-responsive">
                     </a>
+                    <p class="text-center fw-bold">Womans team qualified for Varsity Cup</p>
                 </div>
+                
             </div>
             <div class="col-sm-3 margin-top-5">
                 <hr class="article-color" style="border-bottom: 9px solid rgb(9, 128, 203);">
-                <div class="faculty-logo">
-                    <a href="/faculty/faculty-of-engineering-information-technology">
-                        <img src="/assets/cycling-event.jpg" width="300" height="160" alt="Engineering, Built Environment and Information Technology" title="Engineering, Built Environment and Information Technology" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                <div class="main-events">
+                    <a href="/">
+                        <img src="/assets/croud1.jpg" width="300" height="160" alt="CUT croud chanting" class="img-responsive">
                     </a>
+                    <p class="text-center fw-bold">CUT Sport Event at CUT Stadium</p>
                 </div>
+                
             </div>
             <div class="col-sm-3 margin-top-5">
                 <hr class="article-color" style="border-bottom: 9px solid rgb(163, 17, 16);">
-                <div class="faculty-logo">
-                    <a href="/faculty/management-sciences">
-                        <img src="/assets/labs-hack.jpg" width="300" height="160" alt="Management Sciences" title="Management Sciences" class="img-responsive" onerror="this.src = 'http://placehold.it/213x100';">
+                <div class="main-events">
+                    <a href="/">
+                        <img src="/assets/esports0.jpg" width="300" height="160" alt="esports even" class="img-responsive">
                     </a>
+                    <p class="text-center fw-bold">CS:GO Event on the way</p>
                 </div>
+                
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(253, 204, 28);">
+                <div class="main-events">
+                    <a href="https://www.cut.ac.za/news/cut-students-collaborative-online-international-learning-project">
+                        <img src="/assets/coil.jpg" width="300" height="160" alt="Coil project participants" class="img-responsive">
+                    </a>
+                    <p class="text-center fw-bold">Students participate in the COIL project</p>
+                </div>
+                
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(42, 148, 45);">
+                <div class="main-events">
+                    <a href="/">
+                        @* alt text re, *@
+                        <img src="/assets/grads.jpg" width="300" height="160" alt="graduating students" class="img-responsive">
+                    </a>
+                    <p class="text-center fw-bold">Graduation Ceremony to remember</p>
+                </div>
+                
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(9, 128, 203);">
+                <div class="main-events">
+                    <a href="https://www.cut.ac.za/news/CUT-scoops-three-awards-2023-Intervarsity-Brewing-challenge">
+                        <img src="/assets/brew.jpg" width="300" height="160" alt="students getting awards" class="img-responsive">
+                    </a>
+                    <p class="text-center fw-bold">Intervarsity brewing challange Winners</p>
+                </div>
+                
+            </div>
+            <div class="col-sm-3 margin-top-5">
+                <hr class="article-color" style="border-bottom: 9px solid rgb(163, 17, 16);">
+                <div class="main-events">
+                    <a href="/">
+                        <img src="/assets/med-students.jpg" width="300" height="160" alt="Management Sciences" title="Management Sciences" class="img-responsive">
+                    </a>
+                    <p class="text-center fw-bold">Med students host medical checkups</p>
+                </div>
+                
             </div>
         </div>
     </div>
