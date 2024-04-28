@@ -22,3 +22,14 @@ test users credentials
 ```	username: user1@email.com password: User#1 ``` Unenrolled user
 
 ``` username: admin0@email.com password: Admin#0 ```
+
+
+## Site Images
+![Home Page](/assets/homepage.png)
+![About Page](/assets/aboutpage.png)
+![Contact Page](/assets/contactpage.png)
+![Privacy Page](/assets/privacypage.png)
+![Register Page](/assets/registerpage.png)
+![Login Page](/assets/loginpage.png)
+![Students Details Page(admin)](/assets/studentdetails.png)
+![Student Details(user)](/assets/studentdetails2.png)
