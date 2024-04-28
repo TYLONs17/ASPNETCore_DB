@@ -193,3 +193,110 @@ advertisement-column {
     flex-flow: column;
     align-items: center;
 }
+
+
+
+
+/*FOR Media Queries */
+    /* CSS for small screens */
+    @media (max-width: 768px) {
+        .container-fluid.border-bottom-red.mb-3.d-flex.justify-content-around.align-items-center {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .announcement.mb-3 {
+            width: 100%;
+        }
+
+        .media.d-flex {
+            flex-direction: column;
+        }
+
+        .mediac-head.dynamic-color-border {
+            width: 100%;
+            border: none;
+            border-bottom: 9px solid rgb(163, 17, 16);
+        }
+
+        .media-body.AnnouncementsCarousel {
+            padding: 0;
+        }
+
+        .col-sm-8.media-body.AnnouncementsCarousel {
+            width: 100%;
+        }
+
+        .col-sm-1 {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    /* CSS for medium screens */
+    @media (min-width: 768px) and (max-width: 992px) {
+        .container-fluid.border-bottom-red.mb-3.d-flex.justify-content-around.align-items-center {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .announcement.mb-3 {
+            width: 100%;
+        }
+
+        .media.d-flex {
+            flex-direction: column;
+        }
+
+        .mediac-head.dynamic-color-border {
+            width: 100%;
+            border: none;
+            border-bottom: 9px solid rgb(163, 17, 16);
+        }
+
+        .media-body.AnnouncementsCarousel {
+            padding: 0;
+        }
+
+        .col-sm-8.media-body.AnnouncementsCarousel {
+            width: 100%;
+        }
+
+        .col-sm-1 {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+
+
+
+
+
+    /* CSS for small screens */
+    @media (max-width: 768px) {
+        .services-wrapper.my-3 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .col-sm-3.margin-top-5 {
+            width: 100%;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+    }
+
+    /* CSS for medium screens */
+    @media (min-width: 768px) and (max-width: 992px) {
+        .services-wrapper.my-3 {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .col-sm-3.margin-top-5 {
+            width: 100%;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+    }
+
+/*END Media Queries*/

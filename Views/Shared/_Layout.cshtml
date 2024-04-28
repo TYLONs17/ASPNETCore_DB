@@ -47,6 +47,9 @@
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About" style="font-size: 18px; font-weight: bold;">About</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#contact-section" style="font-size: 18px; font-weight: bold;">Contact</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 18px; font-weight: bold;">Privacy</a>
                             </li>
                             @if (SignInManager.IsSignedIn(User))
@@ -99,7 +102,7 @@
     </div>
 
     <div class="container align-items-bottom">
-        <footer class="footer py-3 px-4 my-4 border-top-red main-bg-color">
+        <footer id="contact-section" class="footer py-3 px-4 my-4 border-top-red main-bg-color">
 
             <div class="row d-flex flex-wrap justify-content-between align-items-center mb-2">
                 <div class="col-md-4">
@@ -172,11 +175,11 @@
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-icons">
-                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li class="ms-3"><a class="text-white" href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="https://www.facebook.com/CUTFreeState/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="https://www.twitter.com/CUTFM1058/"><i class="fab fa-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="https://www.instagram.com/cutfm105.8/"><i class="fab fa-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="https://za.linkedin.com/school/central-university-of-technology-free-state/"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
 
