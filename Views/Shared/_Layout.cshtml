@@ -128,7 +128,7 @@
                 <div class="col-md-4 text-white d-flex flex-column justify-content-center align-items-end">
                     <div>
                         <h2 class="text-white">Contact Us</h2>
-                        <form class="contact-form" asp-action="Contact" asp-controller="Home" onsubmit="return updateRecipient()">
+                        <form class="contact-form" onsubmit="return updateRecipient()">
 
                             <label class="contact-label" for="choice-bfn">
                                 <input class="input-radio" id="choice-bfn" type="radio" name="choice" value="BFN Campus" checked="checked" onchange="updateRecipient()">
@@ -151,7 +151,7 @@
                             <div class="input-wrap" data-validate="Message is required">
                                 <textarea class="input" name="message" placeholder="Your Message"></textarea>
                             </div>
-                            <button class="btn btn-danger" type="submit">
+                            <button class="btn btn-danger btn2" type="submit">
                                 Submit
                             </button>
                         </form>

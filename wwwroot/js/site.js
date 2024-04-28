@@ -19,6 +19,18 @@ function updateRecipient() { // Called when the form is submitted
     return true // Allows the form submission to proceed
 }
 
+function stopdefault() {
+    btn2 = document.getElementsByClassName('btn2');
+
+    for (var i = 0; i < btn2.length; i++) {
+        btn2[i].addEventListener('click', function (e) {
+            e.preventDefault();
+
+            alert('message sent to BFN Campus');
+        });
+    }
+}
+
 
 
 //
