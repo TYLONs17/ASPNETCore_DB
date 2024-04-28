@@ -25,11 +25,11 @@ test users credentials
 
 
 ## Site Images
-![Home Page](/assets/homepage.png)
-![About Page](/assets/aboutpage.png)
-![Contact Page](/assets/contactpage.png)
-![Privacy Page](/assets/privacypage.png)
-![Register Page](/assets/registerpage.png)
-![Login Page](/assets/loginpage.png)
-![Students Details Page(admin)](/assets/studentdetails.png)
-![Student Details(user)](/assets/studentdetails2.png)
+![Home Page](/wwwroot/assets/homepage.png)
+![About Page](/wwwroot/assets/aboutpage.png)
+![Contact Page](/wwwroot/assets/contactpage.png)
+![Privacy Page](/wwwroot/assets/privacypage.png)
+![Register Page](/wwwroot/assets/registerpage.png)
+![Login Page](/wwwroot/assets/loginpage.png)
+![Students Details Page(admin)](/wwwroot/assets/studentdetails.png)
+![Student Details(user)](/wwwroot/assets/studentdetails2.png)
