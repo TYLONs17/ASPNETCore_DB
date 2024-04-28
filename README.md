@@ -27,7 +27,6 @@ test users credentials
 ## Site Images
 ![Home Page](/wwwroot/assets/homepage.png)
 ![About Page](/wwwroot/assets/aboutpage.png)
-![Contact Page](/wwwroot/assets/contactpage.png)
 ![Privacy Page](/wwwroot/assets/privacypage.png)
 ![Register Page](/wwwroot/assets/registerpage.png)
 ![Login Page](/wwwroot/assets/loginpage.png)
